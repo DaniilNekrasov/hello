@@ -1,0 +1,7 @@
+#1/bin/bash
+
+cd .
+
+find $0 -type f -size +$1c -size -$2c -printf '%p %s\n' >$3
+
+find $0 -type f -size +$1c -size -$2c -printf '%p %s\n' | wc -l
